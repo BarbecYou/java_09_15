@@ -18,12 +18,16 @@ public class Pont {
 
     public Pont(int n){
         this.x = koordinataGeneralas(n);
-        this.y = koordinataGeneralas(-n);
+        this.y = koordinataGeneralas(n);
 
     }
 
     private int koordinataGeneralas(int n) {
         return (int)(Math.random() * ((2 * n) + 1) - n);
+    }
+
+    public double getOrigotolMertTavolsag(){
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 
     @Override

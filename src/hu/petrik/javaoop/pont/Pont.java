@@ -16,9 +16,6 @@ public class Pont {
 
     @Override
     public String toString() {
-        return "Pont{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        return String.format("{%d, %d}", this.x, this.y);
     }
 }

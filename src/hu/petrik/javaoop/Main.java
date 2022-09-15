@@ -19,5 +19,16 @@ public class Main {
             System.out.println(p);
         }
 
+        int legtavolabbiPontIndex = 0;
+        for (int i = 1; i < pontok.length; i++) {
+            if (pontok[i].getOrigotolMertTavolsag() > pontok[legtavolabbiPontIndex].getOrigotolMertTavolsag()){
+                legtavolabbiPontIndex = i;
+            }
+        }
+        System.out.printf("A legtávolabbi pont: %d. , koordiánáti: {%s}, távolsága az origotól: %s"
+                , legtavolabbiPontIndex + 1, pontok[legtavolabbiPontIndex],
+                pontok[legtavolabbiPontIndex].getOrigotolMertTavolsag());
+
+
     }
 }

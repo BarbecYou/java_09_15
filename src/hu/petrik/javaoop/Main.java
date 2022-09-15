@@ -1,11 +1,17 @@
 package hu.petrik.javaoop;
 
 import hu.petrik.javaoop.pont.Pont;
+import hu.petrik.javaoop.kor.Kor;
 
 public class Main {
 
     public static void main(String[] args) {
-	    Pont p1 = new Pont();
+        //pontFeladatok();
+        korFeladatok();
+    }
+
+    private static void pontFeladatok() {
+        Pont p1 = new Pont();
         Pont p2 = new Pont(0, 0);
         Pont p3 = new Pont(3, 4);
         Pont p4 = new Pont(100);
@@ -31,8 +37,20 @@ public class Main {
 
         Pont p5 = new Pont(5, 10);
         Pont p6 = new Pont(2, 15);
-        System.out.printf("Első pont koordinátája: {%s}\n" +
-                "Második pont kordinátája: {%s}\n" +
+        System.out.printf("Első pont koordinátája: %s\n" +
+                "Második pont kordinátája: %s\n" +
                 "A távolságuk: %.2f", p5, p6, Pont.getKetPontTavolsaga(p5, p6));
+
+        System.out.println();
+        System.out.printf("A pont: %s\n" +
+                "Ebben a síknegyedben helyezkedik el: %s",p6, p6.getMelyikSikNegyed());
+    }
+
+    private static void korFeladatok() {
+        Pont kozeppont = new Pont(2, 4);
+        Kor k1 = new Kor(5, 10);
+        System.out.println(k1);
+
+        System.out.println(k1.getKorKerulete());
     }
 }

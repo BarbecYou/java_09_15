@@ -22,7 +22,23 @@ public class Pont {
 
     }
 
-    private int koordinataGeneralas(int n) {
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public int koordinataGeneralas(int n) {
         return (int)(Math.random() * ((2 * n) + 1) - n);
     }
 
@@ -32,6 +48,22 @@ public class Pont {
 
     public static double getKetPontTavolsaga(Pont p1, Pont p2){
         return Math.sqrt(Math.pow((p2.x - p1.x),2) + Math.pow((p2.y - p1.y), 2));
+    }
+
+    public int getMelyikSikNegyed(){
+        int result = 0;
+        if (this.x > 0 && this.y > 0){
+            result = 4;
+        } else if (this.x > 0 && this.y < 0){
+            result = 3;
+        } else if (this.x < 0 && this.y > 0){
+            result = 1;
+        } else if (this.x < 0 && this.y < 0){
+            result = 2;
+        } else {
+            result = -1;
+        }
+        return result;
     }
 
     @Override

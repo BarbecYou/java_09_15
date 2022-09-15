@@ -29,6 +29,10 @@ public class Main {
                 , legtavolabbiPontIndex + 1, pontok[legtavolabbiPontIndex],
                 pontok[legtavolabbiPontIndex].getOrigotolMertTavolsag());
 
-
+        Pont p5 = new Pont(5, 10);
+        Pont p6 = new Pont(2, 15);
+        System.out.printf("Első pont koordinátája: {%s}\n" +
+                "Második pont kordinátája: {%s}\n" +
+                "A távolságuk: %.2f", p5, p6, Pont.getKetPontTavolsaga(p5, p6));
     }
 }

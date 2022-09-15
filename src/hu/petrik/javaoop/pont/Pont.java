@@ -30,6 +30,10 @@ public class Pont {
         return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
     }
 
+    public static double getKetPontTavolsaga(Pont p1, Pont p2){
+        return Math.sqrt(Math.pow((p2.x - p1.x),2) + Math.pow((p2.y - p1.y), 2));
+    }
+
     @Override
     public String toString() {
         return String.format("{%d, %d}", this.x, this.y);

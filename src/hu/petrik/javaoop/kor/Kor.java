@@ -21,10 +21,37 @@ public class Kor {
         this.kozeppont = new Pont(n);
     }
 
+    //Getters and Setters
+
+    public Pont getKozeppont() {
+        return kozeppont;
+    }
+
+    public void setKozeppont(Pont kozeppont) {
+        this.kozeppont = kozeppont;
+    }
+
+    public int getR() {
+        return r;
+    }
+
+    public void setR(int r) {
+        this.r = r;
+    }
+
+
     //Mehtods
 
     public double getKorKerulete(){
         return 2 * this.r * Math.PI;
+    }
+
+    public double getKorTerulete(){
+        return Math.pow(this.r, 2) * Math.PI;
+    }
+
+    public void korNagyitasa(double arany){
+        this.r *= arany;
     }
 
     @Override

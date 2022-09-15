@@ -52,5 +52,12 @@ public class Main {
         System.out.println(k1);
 
         System.out.println(k1.getKorKerulete());
+
+        System.out.println(k1.getKorTerulete());
+
+        k1.korNagyitasa(2);
+        System.out.println(k1.getR());
+
+
     }
 }

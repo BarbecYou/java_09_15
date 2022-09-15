@@ -16,9 +16,13 @@ public class Kor {
         this.kozeppont = new Pont();
     }
 
-    public Kor(int r, int n){
-        this.r = r;
+    public Kor(int n, int m){
+        this.r = sugarGeneralas(m);
         this.kozeppont = new Pont(n);
+    }
+
+    private int sugarGeneralas(int m) {
+        return (int)((Math.random() * (m + 1)) + 1);
     }
 
     //Getters and Setters

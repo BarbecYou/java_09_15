@@ -48,7 +48,7 @@ public class Main {
 
     private static void korFeladatok() {
         Pont kozeppont = new Pont(2, 4);
-        Kor k1 = new Kor(5, 10);
+        Kor k1 = new Kor(10, 10);
         System.out.println(k1);
 
         System.out.println(k1.getKorKerulete());
@@ -58,6 +58,21 @@ public class Main {
         k1.korNagyitasa(2);
         System.out.println(k1.getR());
 
+        Kor[] korok = new Kor[10];
+        for (int i = 0; i < korok.length; i++) {
+            korok[i] = new Kor(10, 10);
+        }
+        for (Kor kor: korok){
+            System.out.println(kor);
+        }
 
+        int legnagyobbIndex = 0;
+        for (int i = 0; i < korok.length; i++) {
+            if (korok[i].getKorTerulete() > korok[legnagyobbIndex].getKorTerulete()){
+                legnagyobbIndex = i;
+            }
+        }
+        System.out.printf("A legnagyobb területű kör: %s\n" +
+                "A területe: %f", korok[legnagyobbIndex], korok[legnagyobbIndex].getKorTerulete());
     }
 }
